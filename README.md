@@ -16,7 +16,7 @@ Atualmente a Lanchonete aceita as seguintes formas de pagamento:
  |                                                   |
  |  1 - Café ............................. R$  3,00  |
  |  2   - com chantily ................. + R$  1,50  |
- |  3 - Suco Natural ..................... R$  6,50  |
+ |  3 - Suco Natural ..................... R$  6,20  |
  |  4 - Refrigerante ..................... R$  5,00  |
  |  5 - Sanduíche ........................ R$  6,50  |
  |  6   - queijo extra ................. + R$  2,00  |
@@ -27,14 +27,17 @@ Atualmente a Lanchonete aceita as seguintes formas de pagamento:
  |  COMBOS:                                          |
  |   10 - 1 suco + 1 Sanduíche ........... R$  9,50  |
  |   11 - 1 café + 1 Sanduíche ........... R$  7,50  |
- |   12 - Ala minuta + suco    ........... R$  7,50  |
+ |   12 - Ala minuta + suco    ........... R$ 19,00  |
  |   13 - Ala minuta completa + suco ..... R$ 21,00  |
  |                                                   |
  |  ** Combos não podem ser incrementados com os     |
  |     itens extras, como chantily e queijo.         |
  |___________________________________________________|
 
-DESCONTOS:
+Caso item extra seja informado num pedido que não tenha o respectivo item principal, apresentar mensagem "Item extra não pode ser pedido sem o principal". Combos não são considerados como item principal.
+É possível pedir mais de um item extra sem precisar de mais de um principal.
+
+DESCONTOS E TAXAS:
  - Pagamento em dinheiro tem 5% de desconto
  - Pagamento a crédito tem acréscimo de 3% no valor total
 
