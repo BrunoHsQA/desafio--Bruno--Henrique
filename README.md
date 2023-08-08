@@ -1,46 +1,40 @@
-Caixa da Lanchonete
+# Caixa da Lanchonete
 
 Olá! Você foi contratado para automatizar o caixa da Lanchonete da DB.
 Sua missão será construir um aplicativo de linha de comando (Console) que calcula o valor de uma compra de acordo com o cardápio, regras e descontos da Lanchonete.
+
+<br/>
+
+## Cardápio
+![imagem do cardápio](./docs/cardapio.png)
+
+<br/>
+
+## Formas de pagamento
 Atualmente a Lanchonete aceita as seguintes formas de pagamento:
  - dinheiro
  - debito
  - credito
 
-- Esse é o cardápio:
-  ___________________________________________________
- |                                                   |
- |  🄻🄰🄽🄲🄷🄾🄴🄽🅃🄴 🄳🄰 <🄳🄱>                    |
- |                                                   |
- |   ** Preços unitários                             |
- |                                                   |
- |  1 - Café ............................. R$  3,00  |
- |  2   - com chantily ................. + R$  1,50  |
- |  3 - Suco Natural ..................... R$  6,20  |
- |  4 - Refrigerante ..................... R$  5,00  |
- |  5 - Sanduíche ........................ R$  6,50  |
- |  6   - queijo extra ................. + R$  2,00  |
- |  7 - Salgado .......................... R$  7,25  |
- |  8 - Ala minuta ....................... R$ 15,00  |
- |  9   - com feijão ................... + R$  3,00  |
- |                                                   |
- |  COMBOS:                                          |
- |   10 - 1 suco + 1 Sanduíche ........... R$  9,50  |
- |   11 - 1 café + 1 Sanduíche ........... R$  7,50  |
- |   12 - Ala minuta + suco    ........... R$ 19,00  |
- |   13 - Ala minuta completa + suco ..... R$ 21,00  |
- |                                                   |
- |  ** Combos não podem ser incrementados com os     |
- |     itens extras, como chantily e queijo.         |
- |___________________________________________________|
+O sistema deve receber essa informação como string, utilizando a grafia exatamente igual aos exemplos acima.
 
-Caso item extra seja informado num pedido que não tenha o respectivo item principal, apresentar mensagem "Item extra não pode ser pedido sem o principal". Combos não são considerados como item principal.
-É possível pedir mais de um item extra sem precisar de mais de um principal.
+<br/>
 
-DESCONTOS E TAXAS:
+## Descontos e Taxas:
  - Pagamento em dinheiro tem 5% de desconto
  - Pagamento a crédito tem acréscimo de 3% no valor total
 
-------------------------------------------------------------------------------------
+<br/>
 
+## Outras regras:
+Caso item extra seja informado num pedido que não tenha o respectivo item principal, apresentar mensagem "Item extra não pode ser pedido sem o principal". Combos não são considerados como item principal.
+É possível pedir mais de um item extra sem precisar de mais de um principal.
+
+<br/>
+
+---
+
+<br/>
+
+## Como rodar?
 -- descrever estrutura do código e como rodar
