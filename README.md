@@ -10,7 +10,7 @@ Para baixar a estrutura no formato zip, basta clicar neste [link](https://dev.az
 ### ENTREGANDO O DESAFIO
 Após resolver o desafio e validá-lo com os testes (mais detalhes nos tópicos abaixo), você terá que criar um repositório no [Github](https://github.com/) com o nome de `desafio-$seunome-$sobrenome` (substitua os nomes com $ pelo seu próprio nome e sobrenome). Deṕos disso, você pode enviar o link do seu repositório para que possamos validá-lo para o e-mail: `start@dbserver.com.br`
 
-Se você ainda não teve contato com essas ferramentas, não tem problema, separamos um material para lhe ajudar nessa etapa: [Primeiros passos com Git e Github](https://www.youtube.com/watch?v=E28J23gCBIs).
+Se você ainda não teve contato com essas ferramentas, não tem problema, separamos um material para lhe ajudar nessa etapa: [Como usar Git e Github na prática](https://www.youtube.com/watch?v=UBAX-13g8OM).
 
 
 ## O DESAFIO
