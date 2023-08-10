@@ -1,9 +1,22 @@
-# Caixa da Lanchonete
+# CAIXA DA LANCHONETE
 
+## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?
+Para completar a etapa do desafio você terá que baixar a estrutura do código aqui na Azure, resolver o desafio e entregá-lo no repositório no seu github.
+
+### BAIXANDO A ESTRUTURA
+Para baixar a estrutura no formato zip, basta clicar neste [link](https://dev.azure.com/db-tecnologia/371ab069-cd1e-4ede-8ae5-fa54dd981c56/_apis/git/repositories/a3a8fe92-b324-4d6b-abbd-1953e46fb075/items?path=/&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=zip&api-version=5.0&download=true).
+
+
+### ENTREGANDO O DESAFIO
+Após resolver o desafio e validá-lo com os testes (mais detalhes nos tópicos abaixo), você terá que criar um repositório no [Github](https://github.com/) com o nome de `desafio-$seunome-$sobrenome` (substitua os nomes com $ pelo seu próprio nome e sobrenome).
+Se você ainda não teve contato com essas ferramentas, não tem problema, separamos um material para lhe ajudar nessa etapa: [Primeiros passos com Git e Github](https://www.youtube.com/watch?v=E28J23gCBIs).
+
+
+## O DESAFIO
 Olá! Você foi contratado para automatizar o caixa da Lanchonete da DB.
 Sua missão será construir a lógica que calcula o valor de uma compra de acordo com o cardápio, regras e descontos da Lanchonete.
 
-## Cardápio
+### CARDÁPIO
 
   | codigo    | descrição                   | valor   |
   |-----------|-----------------------------|---------|
@@ -17,7 +30,7 @@ Sua missão será construir a lógica que calcula o valor de uma compra de acord
   | combo2    | 1 Café e 1 Sanduíche        | R$ 7,50 |
 
 
-## Formas de pagamento
+### FORMAS DE PAGAMENTO
 Atualmente a Lanchonete aceita as seguintes formas de pagamento:
  - dinheiro
  - debito
@@ -25,11 +38,11 @@ Atualmente a Lanchonete aceita as seguintes formas de pagamento:
 
 O sistema deve receber essa informação como string, utilizando a grafia exatamente igual aos exemplos acima.
 
-## Descontos e Taxas:
+### DESCONTOS E TAXAS
  - Pagamento em dinheiro tem 5% de desconto
  - Pagamento a crédito tem acréscimo de 3% no valor total
 
-## Outras regras:
+### OUTRAS REGRAS
 
 - Caso item extra seja informado num pedido que não tenha o respectivo item principal, apresentar mensagem "Item extra não pode ser pedido sem o principal".
 - Combos não são considerados como item principal.
@@ -39,20 +52,20 @@ O sistema deve receber essa informação como string, utilizando a grafia exatam
 - Se o código do item não existir, apresentar mensagem "Item inválido!"
 - Se a forma de pagamento não existir, apresentar mensagem "Forma de pagamento inválida!"
 
-## O CÓDIGO
+### O CÓDIGO
 Você está recebendo uma estrutura básica para desenvolver a lógica do caixa. O arquivo principal está localizado dentro da pasta `src` e se chama `caixa-da-lanchonete.js`. Você pode desenvolver a sua lógica criando outros arquivos, métodos e até mesmo outras classes, porém o resultado deve poder ser obtido através do método `calcularValorDaCompra`.
 
 > ALERTA:
 > É importante que a estrutura básica descrita acima não seja alterada, incluindo nome e parâmetros do método. Iremos validar sua solução através destes, assim como você pode validar através dos cenários de testes já implementados em `src/caixa-da-lanchonete.test.js`.
 
-## INSTALANDO E RODANDO NA SUA MÁQUINA
+### INSTALANDO E RODANDO NA SUA MÁQUINA
 1. Instalar o [Node](https://nodejs.org/en/)
 2. Instalar dependencias do projeto com o seguinte comando:
 ```bash
 npm install
 ```
 
-## VALIDANDO A SOLUÇÃO
+### VALIDANDO A SOLUÇÃO
 Junto com a estrutura básica você está recebendo alguns cenários de testes para auxiliar na validação da sua solução. Recomendamos que você crie mais casos de teste para aumentar a confiabilidade da sua solução.
 Para testar sua solução com os cenários já criados, basta rodar o seguinte comando:
 ```bash
@@ -61,14 +74,14 @@ npm test
 
 Para saber mais consulte a [Documentação do Jest](https://jestjs.io/pt-BR/docs/getting-started).
 
-## INPUTS
+### INPUTS
 O método `calcularValorDaCompra` recebe dois parâmetros, `formaDePagamento` e `itens`, sendo o primeiro uma string com os possíveis valores válidos: `debito`, `credito` e `dinheiro`. O segundo parâmetro contém uma array dos itens que serão comprados. Cada item é uma string contendo o código do item e a quantidade do mesmo separados por uma vírgula.
 EXEMPLO:
 ```js
 ['cafe,1','chantily,1']
 ```
 
-## OUPUTS
+### OUPUTS
 O retorno do método `calcularValorDaCompra` deve ser sempre uma string e conteúdo dela pode ser ou o valor total da compra ou uma mensagem de erro conforme as regras descritas anteriormente. O valor da compra deve ser formatado com `R$` e decimais separados por vírgula.
 
 Para padronizar a quantidade de decimais, utilize o método `toFixed` do JavaScript. Esse método serve o propósito deste desafio, porém na vida real a regra de arredondamento deve ser conferida! Para saber mais consulte a [Documentação do Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed).
@@ -81,7 +94,7 @@ EXEMPLO:
 "Forma de pagamento inválida!"
 ```
 
-## EXEMPLOS
+### EXEMPLOS
 
 EXEMPLO 1: Compra de chantily sem café.
 ```js
