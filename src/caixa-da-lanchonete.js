@@ -2,8 +2,8 @@
 // fazendo que nos testes sejam chamados, selecionados e escolhidos para executar o teste com eficiência.
 // Por exemplo: Ao usar o método "constructor", ele faz com que a classe seja identificada quando chamada,
 // o método "this" é uma forma de detalhar as propriedades dentro dela, sendo assim quando o teste chama
-//o item "cafe", o "tihs" é como uma garra que pega algum alimento dentro do "itens", que podemos dizer
-// que é uma caixa cheia de obejtos dentro.
+//o item "cafe", o "this" é como uma garra que pega algum alimento dentro do "itens", que podemos dizer
+// que é uma caixa cheia de objetos dentro.
 //Por fim o método "getItem" é uma forma de ação, quando o usuário executa os testes e tem o item "suco",
 //o "getItem" é o botão que é apertado e a garra "this" solta para ser reconhecido pelo usuário.
 
@@ -27,8 +27,9 @@ class Cardapio {
 }
 
 
-//Os métodos dentro da classe "MetodoDePagamentos" são estáticos, sendo assim que podem ser chamados diretamente
+//Os métodos dentro da classe "MetodoDePagamentos" são estáticos, assim podem ser chamados diretamente
 //sem precisar criar um objeto.
+
 class MetodoDePagamentos {
   static calcularTotalComDesconto(total) {
     return total * 0.95; // 5% de desconto
@@ -63,9 +64,10 @@ class CaixaDaLanchonete {
       }
 
 
-      //Parecido com o anterior a variável "principalItem" reconhece apenas os alimentos principais, caso
-      //um alimento extra seja pedido sem o principal, a mensagem "Item extra não pode ser pedido sem o principal"
-      //aparece.
+//Parecido com o anterior a variável "principalItem" reconhece apenas os alimentos principais, caso
+//um alimento extra seja pedido sem o principal, a mensagem "Item extra não pode ser pedido sem o principal"
+//aparece.
+
       if (codigo === 'chantily') {
         const principalItem = this.cardapio.getItem('cafe');
       
@@ -82,8 +84,9 @@ class CaixaDaLanchonete {
         }
       
 
-        //Este trecho do código calcula o valor multiplicado pela quantidade
-        //o "parseInt" não permite que o item "sanduiche" seja escolhido em 2.4 por exemplo.
+//Este trecho do código calcula o valor multiplicado pela quantidade
+//o "parseInt" não permite que o item "sanduiche" seja escolhido em 2.4 por exemplo.
+
         total += cardapioItem.valor * parseInt(quantidade, 10);
       } else {
         if (quantidade <= 0) {
@@ -95,16 +98,18 @@ class CaixaDaLanchonete {
     }
 
 
-    //Neste trecho caso o programador executar o teste com nada no carrinho, ou nas "caixas", a mensagem
-    // "Não há itens no carrinho de compra!" aparecerá.
+//Neste trecho caso o programador executar o teste com nada no carrinho, ou nas "caixas", a mensagem
+// "Não há itens no carrinho de compra!" aparecerá.
+
     if (itens.length === 0) {
       return "Não há itens no carrinho de compra!";
     }
 
-    //Neste trecho a classe "metodoDePagamento" procura saber se no teste em questão tem as seguintes palavras
-    //abaixo depois do "===", que é uma forma de evitar discrepâncias, tanto o valor como o dado devem ser
-    //estritamente iguais para passar.
-    if (metodoDePagamento === 'dinheiro') {
+//Neste trecho a classe "metodoDePagamento" procura saber se no teste em questão tem as seguintes palavras
+//abaixo depois do "===", que é uma forma de evitar discrepâncias, tanto o valor como o dado devem ser
+//estritamente iguais para passar.
+    
+if (metodoDePagamento === 'dinheiro') {
       total = MetodoDePagamentos.calcularTotalComDesconto(total);
 
     } else if (metodoDePagamento === 'credito') {
@@ -115,9 +120,10 @@ class CaixaDaLanchonete {
     }
 
 
-    //Neste trecho,O método toFixed(2) é usado para garantir que o valor tenha exatamente duas casas decimais.
-    //O método replace('.', ',') garante que o "."(ponto) seja substituido pela ",", assim como o Real.
-    return `R$ ${total.toFixed(2).replace('.', ',')}`;
+ //Neste trecho,O método toFixed(2) é usado para garantir que o valor tenha exatamente duas casas decimais.
+//O método replace('.', ',') garante que o "."(ponto) seja substituido pela ",", assim como o Real.
+   
+ return `R$ ${total.toFixed(2).replace('.', ',')}`;
   }
 }
 
